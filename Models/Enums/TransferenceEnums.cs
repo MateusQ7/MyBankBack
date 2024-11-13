@@ -1,4 +1,4 @@
-namespace MyBankBack.Models
+namespace MyBankBack.Models.Enums
 {
     public enum Transferences
     {

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyBankBack.DTOs;
 
 namespace MyBankBack.Models
 {
@@ -9,22 +10,22 @@ namespace MyBankBack.Models
         [Key]
         public long Id { get; set; }
         [Required]
-        public string InvoiceDescription { get; set; }
+        public string? InvoiceDescription { get; set; }
         [Required]
-        public double Amount { get; set; }
+        public double? Amount { get; set; }
         [Required]
         public DateTime InvoiceDate { get; set; }
         [Required]
-        public string InvoiceStatus { get; set; }
+        public string? InvoiceStatus { get; set; }
         [Required]
         public DateTime DueDate { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         [Required]
         public DateTime? ClosingDate { get; set; }
 
         [ForeignKey("AccountId")]
-        public virtual Account Account { get; set; }
+        public virtual Account? Account { get; set; }
 
         public long AccountId { get; set; }
 

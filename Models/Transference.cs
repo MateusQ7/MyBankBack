@@ -1,6 +1,6 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyBankBack.Models.Enums;
 
 namespace MyBankBack.Models
 {
@@ -30,9 +30,9 @@ namespace MyBankBack.Models
         public Transferences? TransferenceType { get; set; }
 
         [NotMapped]
-        public string SenderAccountCpf => SenderAccount?.Cpf;
+        public string? SenderAccountCpf => SenderAccount?.Cpf;
 
         [NotMapped]
-        public string ReceiverAccountCpf => ReceiverAccount?.Cpf;
+        public string? ReceiverAccountCpf => ReceiverAccount?.Cpf;
     }
 }

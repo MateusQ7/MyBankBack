@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyBankBack.DTOs;
 
 namespace MyBankBack.Models
 {
@@ -26,7 +27,7 @@ namespace MyBankBack.Models
         public string? Cpf { get; set; }
 
         [Required]
-        public DateTime? Birthdate { get; set; }
+        public string? Birthdate { get; set; }
 
         [ForeignKey("Cpf")]
         public virtual Account? Account { get; set; }
